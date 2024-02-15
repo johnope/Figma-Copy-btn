@@ -25,6 +25,6 @@ copyButton.addEventListener("click", (event) => {
 
   // after 1 second, set button text back
   setTimeout(() => {
-    buttonText.textContent = "Copy to Webstudio";
+    buttonText.textContent = "Copied to Figma";
   }, 1000);
 });
