@@ -17,7 +17,7 @@ copyButton.addEventListener("click", (event) => {
   };
 
   // listen for copy
-  document.addEventListener("copy", copyJson);
+  document.addEventListener("copy", copyHtml);
   // execute a copy command
   document.execCommand("copy");
   // remove copy listener (to allow normal copy/paste again)
@@ -25,6 +25,6 @@ copyButton.addEventListener("click", (event) => {
 
   // after 1 second, set button text back
   setTimeout(() => {
-    buttonText.textContent = "Copy to Webflow";
+    buttonText.textContent = "Copy to Webstudio";
   }, 1000);
 });
