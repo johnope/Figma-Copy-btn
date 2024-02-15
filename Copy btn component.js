@@ -11,9 +11,9 @@ copyButton.addEventListener("click", (event) => {
   // define function to copy
   const copyJson = (event) => {
     event.preventDefault();
-    const componentJson = copyButton.querySelector('[wb-data="json"]')
+    const componentHtml = copyButton.querySelector('[wb-data="html"]')
       .textContent;
-    event.clipboardData.setData("application/json", componentJson);
+    event.clipboardData.setData("text/html", componentHtml);
   };
 
   // listen for copy
@@ -21,7 +21,7 @@ copyButton.addEventListener("click", (event) => {
   // execute a copy command
   document.execCommand("copy");
   // remove copy listener (to allow normal copy/paste again)
-  document.removeEventListener("copy", copyJson);
+  document.removeEventListener("copy", copyHtml);
 
   // after 1 second, set button text back
   setTimeout(() => {
